@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florecita</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fdf6c1;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .flower {
+            display: none;
+            animation: bloom 2s ease-in-out;
+        }
+        @keyframes bloom {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        button:hover {
+            background-color: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Una flor abriendo otra flor 🌻</h1>
+        <button onclick="showFlower()">Recibir</button>
+        <button onclick="showFlower()">No recibir</button>
+        
+        <div class="flower" id="flower" style="padding-top: 50px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Vessertal_trollblumen.jpg/280px-Vessertal_trollblumen.jpg" alt="Flor Amarilla" width="400">
+            <h1>"Como la flor de globo amarilla, floreciste en medio del frío y la sombra, demostrando que hasta en los días más oscuros, el sol siempre encuentra la manera de alcanzarte." 🌼✨</h1>
+        </div>
+    </div>
+    <script>
+        function showFlower() {
+            document.getElementById('flower').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
